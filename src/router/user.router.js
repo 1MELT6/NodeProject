@@ -1,7 +1,7 @@
 const Router = require('koa-router')
 const {create} = require('../controller/user.controller')
 
-const userRouter = new Router({prefix:'/user'})
+const userRouter = new Router({prefix:'/users'})
 // restful风格，创建用户要用post请求
 userRouter.post('/',create
 // ,(ctx,next)=>{
