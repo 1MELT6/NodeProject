@@ -7,9 +7,10 @@ const bodyParser = require('koa-parser')
 
 const app = new Koa()
 
-app.use(bodyParser())
+
 const userRouter = require('../router/user.router')
 
+const errorHandle = require('./error-Handle')
 // 路由相关抽离
 // const Router = require('koa-router')
 
@@ -20,9 +21,10 @@ const userRouter = require('../router/user.router')
 // userRouter.post('/',(ctx,next)=>{
 //     ctx.body = "创建用户成功"
 // })
-
+app.use(bodyParser())
 app.use(userRouter.routes())
 app.use(userRouter.allowedMethods())
+app.on('error',errorHandle)
 
 
 module.exports = app
