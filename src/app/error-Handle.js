@@ -18,7 +18,7 @@ const errorHandle = (error, ctx) => {
             break;
         case errorType.PASSWORD_IS_INCORRENT:
             status = 400;
-            message = "密码错误";
+            message = "输入密码错误";
             break;
         default:
             status = 404;

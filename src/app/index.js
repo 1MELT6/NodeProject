@@ -22,8 +22,13 @@ const errorHandle = require('./error-Handle')
 // userRouter.post('/',(ctx,next)=>{
 //     ctx.body = "创建用户成功"
 // })
+app.useRoutes = useRoutes
+
 app.use(bodyParser())
-useRoutes(app)
+
+app.useRoutes();
+// useRoutes(app)
+
 // 有多个路由时每次都要重复不如抽离出去迭代
 // app.use(userRouter.routes())
 // app.use(userRouter.allowedMethods())

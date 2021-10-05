@@ -84,3 +84,8 @@ main.js（抽离koa、app相关让主页面不复杂）->app/index.js(用户注�
 ![1633422788902](C:\Users\52949\AppData\Roaming\Typora\typora-user-images\1633422788902.png)
 
 this为隐式绑定
+
+`l web开发中，我们使用最多的协议是http，但是http是一个无状态的协议。`
+
+安装jsonwebtoken
+
