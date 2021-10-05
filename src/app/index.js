@@ -9,6 +9,7 @@ const app = new Koa()
 
 
 const userRouter = require('../router/user.router')
+const authRouter = require('../router/auth.router')
 
 const errorHandle = require('./error-Handle')
 // 路由相关抽离
@@ -24,6 +25,8 @@ const errorHandle = require('./error-Handle')
 app.use(bodyParser())
 app.use(userRouter.routes())
 app.use(userRouter.allowedMethods())
+app.use(authRouter.routes())
+app.use(authRouter.allowedMethods())
 app.on('error',errorHandle)
 
 
