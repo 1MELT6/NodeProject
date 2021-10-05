@@ -5,8 +5,12 @@ const errorHandle = (error, ctx) => {
 
     switch (error.message) {
         case errorType.NAME_OR_PASSWORD_IS_REQUIRED:
-        status = 404;
+            status = 404;
             message = "不能为空";
+            break;
+        case errorType.NAME_IS_ALREADY_EXISTS:
+            status = 409;
+            message = "用户名已经被注册";
             break;
         default:
             status = 404;
