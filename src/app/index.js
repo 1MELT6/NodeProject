@@ -7,9 +7,9 @@ const bodyParser = require('koa-parser')
 
 const app = new Koa()
 
-
-const userRouter = require('../router/user.router')
-const authRouter = require('../router/auth.router')
+const useRoutes = require('../router/index')
+// const userRouter = require('../router/user.router')
+// const authRouter = require('../router/auth.router')
 
 const errorHandle = require('./error-Handle')
 // 路由相关抽离
@@ -23,10 +23,12 @@ const errorHandle = require('./error-Handle')
 //     ctx.body = "创建用户成功"
 // })
 app.use(bodyParser())
-app.use(userRouter.routes())
-app.use(userRouter.allowedMethods())
-app.use(authRouter.routes())
-app.use(authRouter.allowedMethods())
+useRoutes(app)
+// 有多个路由时每次都要重复不如抽离出去迭代
+// app.use(userRouter.routes())
+// app.use(userRouter.allowedMethods())
+// app.use(authRouter.routes())
+// app.use(authRouter.allowedMethods())
 app.on('error',errorHandle)
 
 

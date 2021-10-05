@@ -53,3 +53,34 @@
 
 main.js（抽离koa、app相关让主页面不复杂）->app/index.js(用户注册接口需要路由请求路径与映射)->router/user.router.js(创建router，使用router.post,函数具体逻辑ctxnext等抽离)->controller/user.controller.js(把回调函数封装为create，处理ctx，request，body相关，查询数据抽离)->services/user.services.js(处理sql语句，导入数据库链接)->授权判断相关->回到router在post里添加中间件(中间件使用抽离)->middleware/user.middleware.js(判断相关授权信息)
 
+![1633416892999](C:\Users\52949\AppData\Roaming\Typora\typora-user-images\1633416892999.png)
+
+
+
+加密：
+
+![1633418043158](C:\Users\52949\AppData\Roaming\Typora\typora-user-images\1633418043158.png)
+
+
+
+## 3、用户登录
+
+![1633419480797](C:\Users\52949\AppData\Roaming\Typora\typora-user-images\1633419480797.png)
+
+授权鉴定
+
+目录读取理解不清晰
+
+![1633422428976](C:\Users\52949\AppData\Roaming\Typora\typora-user-images\1633422428976.png)
+
+更改美观：
+
+![1633422765092](C:\Users\52949\AppData\Roaming\Typora\typora-user-images\1633422765092.png)
+
+![1633422752795](C:\Users\52949\AppData\Roaming\Typora\typora-user-images\1633422752795.png)
+
+![1633422775506](C:\Users\52949\AppData\Roaming\Typora\typora-user-images\1633422775506.png)
+
+![1633422788902](C:\Users\52949\AppData\Roaming\Typora\typora-user-images\1633422788902.png)
+
+this为隐式绑定
