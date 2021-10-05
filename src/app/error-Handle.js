@@ -20,6 +20,10 @@ const errorHandle = (error, ctx) => {
             status = 400;
             message = "输入密码错误";
             break;
+        case errorType.UNAUTHORIZATION:
+            status = 400;
+            message = "token失效了~~~";
+            break;
         default:
             status = 404;
             message = "ＮＯＴＦＯＵＮＤ";
