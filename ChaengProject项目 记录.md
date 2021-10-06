@@ -53,6 +53,10 @@
 
 main.js（抽离koa、app相关让主页面不复杂）->app/index.js(用户注册接口需要路由请求路径与映射)->router/user.router.js(创建router，使用router.post,函数具体逻辑ctxnext等抽离)->controller/user.controller.js(把回调函数封装为create，处理ctx，request，body相关，查询数据抽离)->services/user.services.js(处理sql语句，导入数据库链接)->授权判断相关->回到router在post里添加中间件(中间件使用抽离)->middleware/user.middleware.js(判断相关授权信息)
 
+
+
+controller数 service也是函数 导出的时候都是new一个 引入直接写名字
+
 ![1633416892999](C:\Users\52949\AppData\Roaming\Typora\typora-user-images\1633416892999.png)
 
 
@@ -88,4 +92,10 @@ this为隐式绑定
 `l web开发中，我们使用最多的协议是http，但是http是一个无状态的协议。`
 
 安装jsonwebtoken
+
+
+
+authmiddleware中间件 user忘记导出 1our 所以前面的user都是undefined
+
+![1633447063262](C:\Users\52949\AppData\Roaming\Typora\typora-user-images\1633447063262.png)
 

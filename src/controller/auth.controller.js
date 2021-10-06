@@ -1,20 +1,20 @@
 const jwt = require('jsonwebtoken')
-const {PRIVATE_KEY}= require('../app/config')
+const { PRIVATE_KEY } = require('../app/config')
 
 class AuthController {
-    async login(ctx,next){
-    //    console.log(ctx.user);
-        const {id,name} = ctx.user
+    async login(ctx, next) {
+        //    console.log(ctx.user);
+        const { id, name } = ctx.user
         // const {name} = ctx.request.body;
-        const token = jwt.sign({id,name},PRIVATE_KEY,{
-            expiresIn:60 * 60 *24,
-            algorithm:'RS256'
+        const token = jwt.sign({ id, name }, PRIVATE_KEY, {
+            expiresIn: 60 * 60 * 24,
+            algorithm: 'RS256'
         })
 
         // ctx.body = `登陆成功，欢迎${name}回来！！`
-        ctx.body={ id,name,token  }
+        ctx.body = { id, name, token }
     }
-    async success(ctx,next){
+    async success(ctx, next) {
         ctx.body = "授权成功——"
     }
 }
