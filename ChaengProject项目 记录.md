@@ -99,3 +99,15 @@ authmiddleware中间件 user忘记导出 1our 所以前面的user都是undefined
 
 ![1633447063262](C:\Users\52949\AppData\Roaming\Typora\typora-user-images\1633447063262.png)
 
+![1633501968278](C:\Users\52949\AppData\Roaming\Typora\typora-user-images\1633501968278.png)
+
+bearer有空格
+
+![1633505982763](C:\Users\52949\AppData\Roaming\Typora\typora-user-images\1633505982763.png)
+
+![1633524165949](C:\Users\52949\AppData\Roaming\Typora\typora-user-images\1633524165949.png)
+
+![1633524195029](C:\Users\52949\AppData\Roaming\Typora\typora-user-images\1633524195029.png)
+
+逗号出错
+
