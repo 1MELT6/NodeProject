@@ -1,3 +1,4 @@
+const { execute } = require('../app/database');
 const connection = require('../app/database')
 
 // const sqlFragment = `
@@ -25,11 +26,11 @@ class MomentService {
         WHERE m.id = ?;
         `;
         // const statement = `SELECT * from moment WHERE id = ?;`
-        const [result] = await connection.execute(statement,[id])
+        const [result] = await connection.execute(statement, [id])
         return result[0]
     }
 
-    async getMomentList(offset,size) {
+    async getMomentList(offset, size) {
         const statement = `SELECT
             m.id id, m.content content, m.createAt createTime,m.updateAt updateTime, 
             JSON_OBJECT('id', u.id, 'name', u.name) author
@@ -38,8 +39,14 @@ class MomentService {
         LIMIT ?,?;
         `;
         // const statement = `${sqlFragment} LIMIT ?,?;`
-        const [result] = await connection.execute(statement,[offset,size])
+        const [result] = await connection.execute(statement, [offset, size])
         return result[0]
+    }
+
+    async update(content, momentId) {
+        const statement = `UPDATE moment SET content = ? WHERE id =?;`
+        const [result] = await connection.execute(statement, [content, momentId])
+        return result
     }
 
 }

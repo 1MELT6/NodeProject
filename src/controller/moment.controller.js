@@ -32,8 +32,13 @@ class MomentController {
     async update(ctx, next) {
         // console.log("验证修改的中间件");
         const {momentId} = ctx.params
-
-        // ctx.body = "修改内容" + momentId
+        const {content} = ctx.request.body
+        // const {id} = ctx.user
+        // 上面获取参数下面修改内容
+       
+        const result = await momentService.update(content,momentId)
+        ctx.body = result
+        // ctx.body = "修改内容" + momentId + content
     }
 }
 module.exports = new MomentController()
