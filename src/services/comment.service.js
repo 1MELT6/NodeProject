@@ -21,6 +21,7 @@ class CommentService {
         const [result] = await connection.execute(statement, [commentId]);
         return result;
     }
+    // 两个接口分开设计，一个在moment查询单个，一个在comment以下这个接口
     async getCommentlistById(momentId) {
         const statement =  `SELECT * FROM comment WHERE moment_id = ?`;
         const [result] = await connection.execute(statement, [momentId]);

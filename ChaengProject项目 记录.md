@@ -168,3 +168,7 @@ result风格 会有：params ->commentid等标识
 ![1633598325248](C:\Users\52949\AppData\Roaming\Typora\typora-user-images\1633598325248.png)
 
 ![1633611425263](C:\Users\52949\AppData\Roaming\Typora\typora-user-images\1633611425263.png)
+
+
+
+两种方式实现：1、单个接口两个功能在动态获取接口实现 2、两个接口两个功能两个获取
