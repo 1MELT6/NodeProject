@@ -127,3 +127,43 @@ bearer有空格
 
 ## 5、发布评论
 
+![1633591835199](C:\Users\52949\AppData\Roaming\Typora\typora-user-images\1633591835199.png)
+
+content
+
+请求内容 要与![1633591860770](C:\Users\52949\AppData\Roaming\Typora\typora-user-images\1633591860770.png)
+
+一致
+
+
+
+请求permission多次调用auth.service
+
+ 代码重复过高
+
+![1633597204390](C:\Users\52949\AppData\Roaming\Typora\typora-user-images\1633597204390.png)
+
+如何获取tablename
+
+![1633597257821](C:\Users\52949\AppData\Roaming\Typora\typora-user-images\1633597257821.png)
+
+###### 解决1：闭包
+
+![1633597470259](C:\Users\52949\AppData\Roaming\Typora\typora-user-images\1633597470259.png)
+
+![1633597417953](C:\Users\52949\AppData\Roaming\Typora\typora-user-images\1633597417953.png)
+
+###### 解决2：restful风格
+
+![1633597713435](C:\Users\52949\AppData\Roaming\Typora\typora-user-images\1633597713435.png)
+
+result风格 会有：params ->commentid等标识
+
+![1633598351642](C:\Users\52949\AppData\Roaming\Typora\typora-user-images\1633598351642.png)
+
+
+
+
+
+![1633598325248](C:\Users\52949\AppData\Roaming\Typora\typora-user-images\1633598325248.png)
+
