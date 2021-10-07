@@ -20,7 +20,11 @@ class CommentService {
         const statement =  `DELETE FROM comment WHERE id = ?`;
         const [result] = await connection.execute(statement, [commentId]);
         return result;
-
+    }
+    async getCommentlistById(momentId) {
+        const statement =  `SELECT * FROM comment WHERE moment_id = ?`;
+        const [result] = await connection.execute(statement, [momentId]);
+        return result;
     }
 }
 module.exports = new CommentService()

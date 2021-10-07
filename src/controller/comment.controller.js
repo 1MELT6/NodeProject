@@ -25,6 +25,11 @@ class CommentController{
         const result = await service.remove(commentId)
         ctx.body = result
     }
+    async list(ctx,next){
+        const {momentId} = ctx.query
+        const result = await service.getCommentlistById(momentId)
+        ctx.body = result
+    }
 }
 
 module.exports = new CommentController()
