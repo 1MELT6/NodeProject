@@ -27,7 +27,7 @@ class CommentController{
     }
     async list(ctx,next){
         const {momentId} = ctx.query
-        const result = await service.getCommentlistById(momentId)
+        const result = await service.getCommentsByMomentId(momentId)
         ctx.body = result
     }
 }
