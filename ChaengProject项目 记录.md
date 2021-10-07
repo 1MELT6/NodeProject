@@ -111,3 +111,19 @@ bearer有空格
 
 逗号出错
 
+
+
+## 4、修改动态：
+
+验证权限 由于后期评论头像也要检验权限所以干脆把验证放在service里
+
+鉴权:router->middleware->controller->service
+
+修改:router-->controller->service
+
+两步
+
+![1633532356805](C:\Users\52949\AppData\Roaming\Typora\typora-user-images\1633532356805.png)
+
+## 5、发布评论
+
