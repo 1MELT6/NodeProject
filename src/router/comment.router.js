@@ -15,4 +15,7 @@ commentRouter.delete('/:commentId',verifyAuth,verifyPermission, remove)
 // 动态获取评论列表
 commentRouter.get('/',list)
 
+// 给动态添加标签,
+// commentRouter.post('/:momentId/labels',verifyAuth,verifyPermission,addLabels)
+
 module.exports = commentRouter
